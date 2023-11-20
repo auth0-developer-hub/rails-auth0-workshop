@@ -4,6 +4,7 @@ require_relative 'boot'
 
 require 'rails'
 # Pick the frameworks you want:
+require "active_record/railtie"
 require 'action_controller/railtie'
 require 'action_mailer/railtie'
 require 'rails/test_unit/railtie'
@@ -28,6 +29,16 @@ module WebAppRailsRubyHelloWorldInternalPrototypeTemp
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    # Skipping tests for the sake of time
+    config.generators do |g|
+      g.template_engine nil #to skip views
+      g.test_framework  nil #to skip test framework
+      g.assets  false
+      g.helper false
+      g.stylesheets false
+    end
+    
     config.exceptions_app = routes
 
     config.logger = Logger.new($stdout)
