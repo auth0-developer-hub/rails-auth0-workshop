@@ -13,6 +13,7 @@
 ActiveRecord::Schema[7.0].define(version: 2023_11_20_161837) do
   create_table "messages", force: :cascade do |t|
     t.string "text"
+    t.string "message_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
@@ -25,6 +26,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_20_161837) do
     t.string "email"
     t.boolean "email_verified"
     t.string "sub"
+    t.string "role"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
