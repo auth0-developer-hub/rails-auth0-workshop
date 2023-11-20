@@ -1,15 +1,9 @@
 class Message < ApplicationRecord
-  ADMIN = 'admin'
-  PROTECTED = 'protected'
-  PUBLIC = 'public'
-  
-  def initialize(type)
-    @text = "This is #{message_type_string(type)} message."
-  end
+  belongs_to :user 
 
-  private
+  validates :type, inclusion: { in: %w(protected public) }
 
-  def message_type_string(type)
-    type == ADMIN ? "an #{type}" : "a #{type}"
+  def verbose
+    type == ADMIN ? "This is an #{type} message." : "This is a #{type} message."
   end
 end
