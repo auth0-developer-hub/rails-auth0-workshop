@@ -5,4 +5,8 @@ Rails.application.routes.draw do
 
   get 'profile', to: 'users#profile'
 
+  get 'protected', to: 'messages#protected'
+  get 'public', to: 'messages#public'
+  get 'admin', to: 'messages#admin'
+
 end
