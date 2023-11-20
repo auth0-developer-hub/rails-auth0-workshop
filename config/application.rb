@@ -32,11 +32,11 @@ module WebAppRailsRubyHelloWorldInternalPrototypeTemp
 
     # Skipping tests for the sake of time
     config.generators do |g|
-      g.template_engine nil #to skip views
       g.test_framework  nil #to skip test framework
       g.assets  false
       g.helper false
       g.stylesheets false
+      g.jbuilder false
     end
     
     config.exceptions_app = routes
