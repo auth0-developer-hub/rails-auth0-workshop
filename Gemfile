@@ -47,6 +47,8 @@ group :development, :test do
   gem 'pry'
 
   gem 'dotenv-rails'
+  
+  gem 'awesome_print'
 end
 
 group :development do
