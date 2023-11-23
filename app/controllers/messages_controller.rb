@@ -8,6 +8,6 @@ class MessagesController < ApplicationController
   end
 
   def admin
-    @messages = Message.where(message_type: "admin")
+    @messages = Message.joins(:user).where('users.role == "admin"')
   end
 end
