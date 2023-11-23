@@ -1,3 +1,5 @@
 class User < ApplicationRecord
-  validates :role, inclusion: { in: %w( admin ) }
+  has_many :messages
+  
+  validates :role, inclusion: { in: %w( admin ) }, allow_nil: true
 end
