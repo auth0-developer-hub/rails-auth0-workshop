@@ -19,7 +19,7 @@
         </div>
       </div>
       <div class="profile__details">
-        <%= render partial: "layouts/partials/code_snippet", locals: { title: "Decoded ID Token", code: @user.as_json } %> 
+        <%= render partial: "layouts/partials/code_snippet", locals: { title: "Decoded ID Token", code: JSON.pretty_generate(@user.as_json) } %> 
       </div>
     </div>
   </div>
