@@ -9,6 +9,6 @@
         <strong>Only authenticated users should access this page.</strong>
       </span>
     </p>
-    <%= render partial: "layouts/partials/code_snippets", locals: { title: "Protected Messages", messages: @messages } %>
+    <%= render partial: "layouts/partials/code_snippets", locals: { title: "Protected Messages", messages: @messages.map(&:verbose) } %>
   </div>
 </div>
