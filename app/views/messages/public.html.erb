@@ -9,6 +9,6 @@
         <strong>Any visitor can access this page.</strong>
       </span>
     </p>
-    <%= render partial: "layouts/partials/code_snippets", locals: { title: "Public Messages", messages: @messages.map(&:verbose) } %>
+    <%= render partial: "layouts/partials/code_snippets", locals: { title: "Public Messages", codes: @messages.map(&:verbose) } %>
   </div>
 </div>
