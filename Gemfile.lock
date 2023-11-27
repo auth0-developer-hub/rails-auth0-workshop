@@ -67,10 +67,7 @@ GEM
       minitest (>= 5.1)
       tzinfo (~> 2.0)
     awesome_print (1.9.2)
-<<<<<<< HEAD
     base64 (0.2.0)
-=======
->>>>>>> 96377dc (add awesome print gem)
     bindex (0.8.1)
     bootsnap (1.16.0)
       msgpack (~> 1.2)
