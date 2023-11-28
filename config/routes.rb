@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   get 'public', to: 'messages#public'
   get 'admin', to: 'messages#admin'
 
+  match '/404', to: 'errors#not_found', via: :all
+  match '/500', to: 'errors#server_error', via: :all
 end
