@@ -6,5 +6,4 @@ class Message < ApplicationRecord
   def verbose
     "This is a #{message_type} message. Owned by user #{user_id}"
   end
-
 end
