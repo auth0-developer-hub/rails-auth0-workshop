@@ -6,7 +6,7 @@ class MessagesController < ApplicationController
   end
 
   def protected
-    @messages = Message.where(message_type: "protected")
+    @messages = Message.where(message_type: "protected", user_id: user_id)
   end
 
   def admin

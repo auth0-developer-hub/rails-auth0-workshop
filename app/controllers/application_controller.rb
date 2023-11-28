@@ -15,4 +15,12 @@ class ApplicationController < ActionController::Base
   def decoded_id_token
     JWT.decode(session[:credentials][:id_token], nil, false)[0].deep_symbolize_keys
   end
+
+  def user_params
+    current_user.slice(:nickname, :name, :picture, :updated_at, :email, :email_verified, :sub)
+  end
+
+  def user_id 
+    User.find_by(nickname: current_user[:nickname]).id
+  end
 end

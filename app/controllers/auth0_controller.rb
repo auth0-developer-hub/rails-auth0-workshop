@@ -7,6 +7,8 @@ class Auth0Controller < ApplicationController
     session[:credentials] = {}
     session[:credentials][:id_token] = auth_info['credentials']['id_token']
 
+    User.find_or_initialize_by(nickname: current_user[:nickname]).update(user_params)
+
     redirect_to profile_path
   end
 
