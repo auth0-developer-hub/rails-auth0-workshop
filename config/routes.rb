@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     # Auth0 routes    
     scope :auth0 do
       get 'callback' => 'auth0#callback'
+      get 'logout' => 'auth0#logout'
     end
   end
 
