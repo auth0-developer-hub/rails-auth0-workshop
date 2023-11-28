@@ -1,3 +1,4 @@
 <div class="<%= nav_bar_class %>">
-    <%= button_to 'Log In', '/auth/auth0', params: {prompt: 'login'}, data: {turbo: "false"}, class: 'button__login' %>  
+  <%= button_to 'Sign Up', '/auth/auth0', params: {prompt: 'login', screen_hint: 'signup'}, data: {turbo: "false"}, class: 'button__sign-up' %>    
+  <%= button_to 'Log In', '/auth/auth0', params: {prompt: 'login'}, data: {turbo: "false"}, class: 'button__login' %>  
 </div>
