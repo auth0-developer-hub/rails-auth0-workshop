@@ -34,6 +34,12 @@ gem 'bootsnap', require: false
 
 gem 'sqlite3'
 
+# Gem Repost implements Redirect using POST method. https://vergilet.github.io/repost/ 
+gem 'repost'
+
+# A ruby implementation of the RFC 7519 OAuth JSON Web Token (JWT) standard. https://github.com/jwt/ruby-jwt
+gem 'jwt'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
