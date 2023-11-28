@@ -10,6 +10,6 @@ class MessagesController < ApplicationController
   end
 
   def admin
-    @messages = Message.joins(:user).where('users.role == "admin"')
+    @messages = Message.joins(:user).where("users.role == 'admin' AND users.id == #{user_id}")
   end
 end
