@@ -4,6 +4,7 @@ RUN mkdir /app
 WORKDIR /app
 ADD Gemfile /app/Gemfile
 ADD Gemfile.lock /app/Gemfile.lock
+ADD .ruby-version /app/.ruby-version
 RUN bundle install
 RUN rails db:migrate
 ADD . /app
