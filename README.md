@@ -10,6 +10,16 @@ Auth0 is a flexible drop-in solution to add authentication and authorization ser
 
 ## Set Up and Run the Rails Project
 
+### Docker Set Up 
+
+Install [Docker Desktop](https://www.docker.com/products/docker-desktop/) and then in your terminal run the following: 
+
+```config/shell
+docker-compose build && docker-compose up
+```
+
+### Native Set Up 
+
 Install the project dependencies:
 
 ```bash
@@ -39,5 +49,5 @@ SECRET_KEY_BASE=<generated_key>
 Run the project:
 
 ```bash
-bin/rails
+bin/rails s 
 ```
