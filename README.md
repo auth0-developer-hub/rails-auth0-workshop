@@ -15,7 +15,7 @@ Auth0 is a flexible drop-in solution to add authentication and authorization ser
 Install [Docker Desktop](https://www.docker.com/products/docker-desktop/) and then in your terminal run the following: 
 
 ```config/shell
-docker-compose build && docker-compose up
+docker-compose up --build --force-recreate --no-deps
 ```
 
 The app will be running at `https://localhost:4040`
