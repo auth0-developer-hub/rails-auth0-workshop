@@ -18,6 +18,8 @@ Install [Docker Desktop](https://www.docker.com/products/docker-desktop/) and th
 docker-compose build && docker-compose up
 ```
 
+The app will be running at `https://localhost:4040`
+
 ### Native Set Up 
 
 Install the project dependencies:
